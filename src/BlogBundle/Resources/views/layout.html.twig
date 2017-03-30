@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {% block main_menu %}
+        <ul>
+            <li>
+                <a href="{{ path('blog_about') }}">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('blog_teaser') }}">
+                    Blogs
+                </a>
+            </li>
+        </ul>
+    {% endblock %}
+
+
+    {% block page_title %}{% endblock %}
+    
+    {% block block_conent %}{% endblock %}
+{% endblock %}
+
+

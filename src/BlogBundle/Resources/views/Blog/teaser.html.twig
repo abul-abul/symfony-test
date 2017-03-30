@@ -1,0 +1,22 @@
+{% extends "BlogBundle::layout.html.twig" %}
+{% block page_title %}<h1>Teaser</h1>{% endblock %}
+
+
+{% block block_conent %}
+    <h1>Title Block</h1>
+
+    {% for blog in blogs %}
+        <article>
+            <h2>
+                <a href="{{ path('blog_view',{'id' : blog.id}) }}">
+                    {{ blog.title }}
+                </a>
+            </h2>
+
+                <div class="conatner">
+                    {{ blog.body }}
+                </div>
+
+        </article>
+    {% endfor %}
+{% endblock %}
